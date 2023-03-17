@@ -88,11 +88,59 @@ main{
     display: flex;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    gap:1 rem;
 
     transition: all 0.5s ease-in-out;
     
 }
 
+#workGrid{
+    /* width:80%; */
+    flex:1;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "firstProject"
+    "secondaryGrid";
+    row-gap: 1rem;
+}
+
+#firstProject{
+    grid-area: firstProject;
+}
+
+#secondaryGrid{
+    grid-area: secondaryGrid;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+    grid-template-areas: 
+    "secondProject thirdProject"
+    "fourthProject fifthProject";
+    row-gap: 1rem;
+    column-gap: 1rem;
+}
+#secondProject{
+    grid-area: secondProject;
+}
+
+#thirdProject{
+    grid-area: thirdProject;
+}
+
+#fourthProject{
+    grid-area: fourthProject;
+}
+
+#fifthProject{
+    grid-area: fifthProject;
+}
+
+.card{
+    height: min(20vw,300px);
+    border: #082730 solid 1px;
+}
 .title{
     text-align: end;
     color: var(--prusianBlue);
@@ -107,7 +155,7 @@ main{
 }
 .row p{
     align-self: center;
-    width: 70%;
+    flex:1;
 }
 
 footer{
