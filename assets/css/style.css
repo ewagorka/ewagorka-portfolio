@@ -76,7 +76,32 @@ display: inline;
   z-index: 1;
   border-radius: 0.75rem;
 }
+main{
+    padding: 1rem 2rem;
+}
 
+.row{
+    display: flex;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.title{
+    text-align: end;
+    color: var(--prusianBlue);
+    font-size: 1.5rem;
+    border-right: var(--prusianBlue) solid 1px ;
+    padding: 1rem;
+    white-space: nowrap;
+    display: inline-block;
+    width: 20%;
+    justify-content: center;
+    margin-right: 1rem;
+}
+.row p{
+    align-self: center;
+    width: 70%;
+}
 /*BREAKPOINTS*/
 /* Breakpoints*/
 /* @media only screen and (max-width:1023){
@@ -115,6 +140,25 @@ display: inline;
       nav a{
           padding: 1rem 1rem;
       }
+      .row{
+       display: flex;
+       flex-direction: column;
+      }
+      .title{
+        color: var(--prusianBlue);
+        font-size: 1.5rem;
+        border-right:none;
+        border-bottom: var(--prusianBlue) solid 1px ;
+        padding: 1rem;
+        white-space: nowrap;
+        display: inline-block;
+        width: 10rem;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+    .row p{
+        width: 100%;
+    }
    }
   @media only screen and (max-width:767px){
    header{
@@ -131,4 +175,9 @@ display: inline;
     nav a{
         margin: auto;
     }
+
+    .row{
+        display: flex;
+        flex-direction: column;
+       }
   }
