@@ -1,0 +1,84 @@
+:root{
+    --magnolia:#F4EDF7;
+    --amethyst: #A06CD5;
+    --royalPurple: #A06CD5;
+    --prusianBlue: #102B3F;
+    --gunmetal: #082730;
+}
+
+body{
+    background-color: var(--magnolia);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0%;
+    padding: 0;
+}
+/*Get rid of gap between all elements (without it there is
+a gap between header and section*/
+* { margin: 0; padding: 0; }
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: var(--gunmetal);
+    margin: 0%;
+}
+#logo{
+    color: var(--gunmetal);
+    font-size: 1.5rem;
+    background-color: var(--royalPurple);
+    margin-left: -2rem;
+    padding-left: 2rem;
+    padding-right: 1rem;
+    height: 4rem;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+nav a{
+    color: var(--amethyst);
+    text-decoration: none;
+    margin-left: 1rem;
+    padding: 0.5rem;
+    border: #F4EDF7 solid 1px;
+    white-space: nowrap;
+}
+
+#hero{
+    height: 200px;
+    background-color: var(--amethyst);
+}
+
+/*BREAKPOINTS*/
+/* Breakpoints*/
+@media only screen and (max-width:700px){
+    header{
+      display:flex;
+      flex-direction: column;
+    }
+    nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 1rem ;
+    }
+    nav a{
+        padding: 1rem 1rem;
+    }
+    
+  }
+
+  @media only screen and (max-width:434px){
+    nav{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+  }
