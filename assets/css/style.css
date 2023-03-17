@@ -61,7 +61,7 @@ nav a{
 
 /*BREAKPOINTS*/
 /* Breakpoints*/
-@media only screen and (min-width: 768px) and (max-width:1023){
+/* @media only screen and (max-width:1023){
     header{
       display:flex;
       flex-direction: column;
@@ -77,10 +77,24 @@ nav a{
         padding: 1rem 1rem;
     }
     
-  }
-
+  } */
+  @media only screen and (max-width:1023px){
+    header{
+        display:flex;
+        flex-direction: column;
+      }
+      nav{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          padding-top: 1rem ;
+      }
+      nav a{
+          padding: 1rem 1rem;
+      }
+   }
   @media only screen and (max-width:767px){
-   /* header{
+   header{
    display: flex;
    flex-direction: column;
    }
@@ -93,12 +107,8 @@ nav a{
         justify-content: center;
 
     }
-    nav{
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-    }
+    
     nav a{
         margin: auto;
-    } */
+    }
   }
