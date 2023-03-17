@@ -14,7 +14,10 @@ body{
 }
 /*Get rid of gap between all elements (without it there is
 a gap between header and section*/
-* { margin: 0; padding: 0; }
+* { margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
 
 header{
     display: flex;
@@ -58,10 +61,11 @@ nav a{
 
 /*BREAKPOINTS*/
 /* Breakpoints*/
-@media only screen and (max-width:700px){
+@media only screen and (min-width: 768px) and (max-width:1023){
     header{
       display:flex;
       flex-direction: column;
+      background-color: red;
     }
     nav{
         display: flex;
@@ -75,10 +79,26 @@ nav a{
     
   }
 
-  @media only screen and (max-width:434px){
+  @media only screen and (max-width:767px){
+   /* header{
+   display: flex;
+   flex-direction: column;
+   }
+   #logo{
+    padding: 0;
+    margin: 0;
+   }
+    #logo h1{
+
+        justify-content: center;
+
+    }
     nav{
         display: flex;
         flex-direction: column;
         text-align: center;
     }
+    nav a{
+        margin: auto;
+    } */
   }
