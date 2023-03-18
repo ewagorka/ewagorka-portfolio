@@ -63,7 +63,6 @@ nav a{
     background-color: var(--royalPurple);
     background-image: url('../images/gradient.jpg');
     background-repeat: no-repeat;
-    background-size: 100% 100%;
     background-size: cover;
     background-position: center; /* Center the image */
     height: 12rem;
@@ -88,11 +87,100 @@ main{
     display: flex;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    padding-bottom: 5rem;
 
     transition: all 0.5s ease-in-out;
     
 }
+.rowParagraph{
+    align-self: center;
+    flex:1;
+}
 
+#workGrid{
+    /* width:80%; */
+    flex:1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "firstProject firstProject"
+    "secondaryGrid secondaryGrid";
+    row-gap: 1rem;
+}
+
+#firstProject{
+    grid-area: firstProject;
+    background-image: url(../images/img1.jpg);
+}
+
+#secondaryGrid{
+    grid-area: secondaryGrid;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+    grid-template-areas: 
+    "secondProject thirdProject"
+    "fourthProject fifthProject";
+    row-gap: 1rem;
+    column-gap: 1rem;
+}
+#secondProject{
+    grid-area: secondProject;
+    background-image: url(../images/img2.jpg);
+}
+
+#thirdProject{
+    grid-area: thirdProject;
+    background-image: url(../images/img3.jpg);
+}
+
+#fourthProject{
+    grid-area: fourthProject;
+    background-image: url(../images/img4.jpg);
+}
+
+#fifthProject{
+    grid-area: fifthProject;
+    background-image: url(../images/img5.jpg);
+}
+
+.card{
+    min-height: min(15vw,300px);
+    border: #082730 solid 1px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; /* Center the image */
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.cardTitle{
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    padding-right: 2rem;
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0 12px 12px 0;
+}
+.card h3{
+    font-size: 1.5rem;
+    color: var(--prusianBlue);
+    line-height: 150%;
+}
+.cardSubtitle{
+    color: var(--royalPurple);
+    flex:0;
+    font-size: 1rem;
+    line-height: 120%;
+}
 .title{
     text-align: end;
     color: var(--prusianBlue);
@@ -104,10 +192,6 @@ main{
     width: 20%;
     justify-content: center;
     margin-right: 1rem;
-}
-.row p{
-    align-self: center;
-    width: 70%;
 }
 
 footer{
@@ -194,6 +278,11 @@ footer{
     }
 
     .row{
+        display: flex;
+        flex-direction: column;
+       }
+    
+       #secondaryGrid{
         display: flex;
         flex-direction: column;
        }
