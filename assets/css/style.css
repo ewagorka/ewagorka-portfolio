@@ -63,7 +63,6 @@ nav a{
     background-color: var(--royalPurple);
     background-image: url('../images/gradient.jpg');
     background-repeat: no-repeat;
-    background-size: 100% 100%;
     background-size: cover;
     background-position: center; /* Center the image */
     height: 12rem;
@@ -88,26 +87,31 @@ main{
     display: flex;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    gap:1 rem;
+    padding-bottom: 5rem;
 
     transition: all 0.5s ease-in-out;
     
+}
+.rowParagraph{
+    align-self: center;
+    flex:1;
 }
 
 #workGrid{
     /* width:80%; */
     flex:1;
     display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas: 
-    "firstProject"
-    "secondaryGrid";
+    "firstProject firstProject"
+    "secondaryGrid secondaryGrid";
     row-gap: 1rem;
 }
 
 #firstProject{
     grid-area: firstProject;
+    background-image: url(../images/img1.jpg);
 }
 
 #secondaryGrid{
@@ -123,23 +127,57 @@ main{
 }
 #secondProject{
     grid-area: secondProject;
+    background-image: url(../images/img2.jpg);
 }
 
 #thirdProject{
     grid-area: thirdProject;
+    background-image: url(../images/img3.jpg);
 }
 
 #fourthProject{
     grid-area: fourthProject;
+    background-image: url(../images/img4.jpg);
 }
 
 #fifthProject{
     grid-area: fifthProject;
+    background-image: url(../images/img5.jpg);
 }
 
 .card{
-    height: min(20vw,300px);
+    min-height: min(15vw,300px);
     border: #082730 solid 1px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; /* Center the image */
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+}
+
+.cardTitle{
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    padding-right: 2rem;
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0 12px 12px 0;
+}
+.card h3{
+    font-size: 1.5rem;
+    color: var(--prusianBlue);
+    line-height: 150%;
+}
+.cardSubtitle{
+    color: var(--royalPurple);
+    flex:0;
+    font-size: 1rem;
+    line-height: 120%;
 }
 .title{
     text-align: end;
@@ -152,10 +190,6 @@ main{
     width: 20%;
     justify-content: center;
     margin-right: 1rem;
-}
-.row p{
-    align-self: center;
-    flex:1;
 }
 
 footer{
@@ -242,6 +276,11 @@ footer{
     }
 
     .row{
+        display: flex;
+        flex-direction: column;
+       }
+    
+       #secondaryGrid{
         display: flex;
         flex-direction: column;
        }
