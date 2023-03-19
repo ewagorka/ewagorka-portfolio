@@ -286,7 +286,17 @@ footer{
         flex-direction: column;
         align-items: start;
     }
+    #workGrid{
+        grid-template-rows: 45% 55%;
+    }
+    .card{
+        min-height:200px;
+    }
+
+
+
    }
+
   @media only screen and (max-width:767px){
    header{
    display: flex;
@@ -312,4 +322,12 @@ footer{
         display: flex;
         flex-direction: column;
        }
+       #workGrid{
+        display: flex;
+        flex-direction: column;
+       }
+       .card{
+        height: 200px;
+       }
+
   }
