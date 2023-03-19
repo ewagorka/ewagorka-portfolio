@@ -64,14 +64,15 @@ nav a:is(:hover, :active){
 }
 
 #hero{
-    height: 200px;
+
     background-color: var(--royalPurple);
     background-image: url('../images/gradient.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center; /* Center the image */
-    height: 12rem;
+    background-position: center;
+    height: min(30vw,300px);
     position: relative;
+    overflow: hidden;
 }
 
 #headline{
@@ -100,6 +101,12 @@ main{
 .rowParagraph{
     align-self: center;
     flex:1;
+}
+.rowParagraph img {
+    width: 100px;
+    margin-bottom: 1rem;
+    border-radius: 12px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 #aboutMe{
