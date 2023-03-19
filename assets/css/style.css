@@ -100,10 +100,11 @@ main{
 .rowParagraph{
     align-self: center;
     flex:1;
-    font-size: 1.1rem;
-    line-height: 120%;
 }
 
+#aboutMe{
+    margin-top: 5rem;
+}
 #workGrid{
     flex:1;
     display: grid;
@@ -262,9 +263,13 @@ footer{
       nav a{
           padding: 1rem 1rem;
       }
+      #aboutMe{
+        margin-top: 2rem;
+      }
       .row{
        display: flex;
        flex-direction: column;
+        padding-bottom: 2rem;
       }
       .title{
         text-align: start;
@@ -288,7 +293,7 @@ footer{
         align-items: start;
     }
     #workGrid{
-        grid-template-rows: 45% 55%;
+        grid-template-rows: 0.9fr 1.1fr;
     }
     .card{
         min-height:200px;
