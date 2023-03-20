@@ -28,7 +28,7 @@ This project was made using HTML and CSS only.
 You can see my deployed website here: https://ewagorka.github.io/ewagorka-portfolio/
 
 ## Deployed Website Screenshot
-![Deployed Website Screenshot]( assets/images/screenshot.png "Deployed Website Screenshot")
+![Deployed Website Screenshot](assets/images/screenshot.png "Deployed Website Screenshot")
 
 ## License
 Please refer to the LICENSE in the repo.
